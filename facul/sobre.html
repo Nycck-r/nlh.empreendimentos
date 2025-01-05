@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NLH Empreendimentos | Sobre Nós</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="sobre.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <!-- Logo -->
+        <div class="logo">
+            <span class="letter">
+                N
+                <img src="./img/NYCCK.png" alt="Assinatura do Sócio 1">
+            </span>
+            <span class="letter">
+                L
+                <img src="./img/WhatsApp Image 2024-12-10 at 17.27.43.png" alt="Assinatura do Sócio 2">
+            </span>
+            <span class="letter">
+                H
+                <img src="./img/heytor.png" alt="Assinatura do Sócio 3">
+            </span>
+        </div>
+
+        <!-- Tagline -->
+        <div class="tagline">ᴇᴍᴘᴇᴇɴᴅɪᴍᴇɴᴛᴏs</div>
+
+        <!-- Menu Toggle for mobile -->
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <nav class="desktop-menu">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="sobre.html">SOBRE NÓS</a></li>
+                <li><a href="#servicos">SERVIÇOS</a></li>
+                <li><a href="#contato">CONTATO</a></li>
+            </ul>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <nav class="mobile-menu">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="sobre.html">SOBRE NÓS</a></li>
+                <li><a href="#servicos">SERVIÇOS</a></li>
+                <li><a href="#contato">CONTATO</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="separadorheader"></div>
+
+    <!-- Seção Sobre -->
+    <section class="intro">
+        <div class="designer">
+            <h1>S O B R E</h1>
+            <p>NLH Empreendimentos é uma empresa focada em soluções inovadoras no ramo de empreendimentos e desenvolvimento pessoal.</p>
+        </div>
+        <div class="image-center">
+            <img src="./img/Leonardo_Phoenix_Design_a_hero_image_for_my_websites_backgroun_2.jpg" alt="Grafiteiro Libertário">
+        </div>
+        <div class="coder">
+            <h1>&lt;N Ó S&gt;</h1>
+            <p>Com uma história marcada por excelência e compromisso com a qualidade, a marca se destaca pelo atendimento personalizado e pela busca constante por inovação tecnológica e design.</p>
+        </div>
+    </section>
+
+    <section id="servicos">
+        <h2>Serviços</h2>
+        <div class="services-container">
+            <div class="service">
+                <h3>Disponibilidade de Ajuda em cura de dores mentais e fisicas</h3>
+                <p>Oferecemos suporte especializado no gerenciamento de dores físicas e emocionais, utilizando técnicas de desenvolvimento pessoal e terapia. Nosso objetivo é melhorar a qualidade de vida dos nossos clientes, promovendo um equilíbrio saudável entre corpo e mente.</p>
+            </div>
+            <div class="service">
+                <h3>Mentoria de Mentalidade Masculina</h3>
+                <p>Trabalhamos para ajudar homens a desenvolverem uma mentalidade forte, confiante e resiliente em sua vida pessoal e profissional.</p>
+            </div>
+            <div class="service">
+                <h3>Planejamento Estratégico de Empreendimentos</h3>
+                <p>Desenvolvemos estratégias personalizadas para seu negócio, garantindo um crescimento sustentável e direcionado aos seus objetivos de longo prazo.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contato">
+        <h2>Contato</h2>
+        <div class="contact-info">
+            
+            <div class="contact-item">
+                <h3>Telefone</h3>
+                <p>(11) 1234-5678</p>
+            </div>
+            <div class="contact-item">
+                <h3>Email</h3>
+                <p>nlh_empreendimentos@outlook.com</p>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/nlh_empreendimentos" class="instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://chat.whatsapp.com/Clp9rKA4g0eFFVgjMJmQnf" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        <p>&copy; 2025 NLH Empreendimentos. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector('.mobile-menu').classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>

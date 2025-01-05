@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>NLH Empreendimentos | E-book Forja</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="forja.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">
+      <span class="letter">
+        N
+        <img src="./img/NYCCK.png" alt="Assinatura do Sócio 1">
+      </span>
+      <span class="letter">
+        L
+        <img src="./img/WhatsApp Image 2024-12-10 at 17.27.43.png" alt="Assinatura do Sócio 2">
+      </span>
+      <span class="letter">
+        H
+        <img src="./img/heytor.png" alt="Assinatura do Sócio 3">
+      </span>
+    </div>
+    <div class="tagline">ᴇᴍᴘʀᴇᴇɴᴅɪᴍᴇɴᴛᴏs</div>
+    <nav class="menu-toggle" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </nav>
+    <i class="bi bi-basket3 mobile-basket-icon"></i> <!-- Ícone de cesta -->
+
+    
+    <nav class="desktop-menu">
+      <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="sobre.html">SOBRE NÓS</a></li>
+          <li><a href="sobre.html#servicos">SERVIÇOS</a></li>
+          <li><a href="sobre.html#contato">CONTATO</a></li>
+      </ul>
+  </nav>
+
+
+
+    <nav class="mobile-menu">
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="sobre.html">SOBRE NÓS</a></li>
+        <li><a href="#servicos">SERVIÇOS</a></li>
+        <li><a href="#contato">CONTATO</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="ebook-details">
+    <div class="container">
+      <h1>Detalhes do E-book "Forja"</h1>
+      <div class="ebook-info">
+        <div class="ebook-image">
+          <img src="./img/forja.jpeg" alt="Capa do eBook Forja">
+        </div>
+        <div class="ebook-description">
+          <h2>Forja: Como Construir uma Mentalidade Inabalável</h2>
+          <p>O eBook "Forja" é um guia completo para ajudar você a enfrentar os maiores desafios da vida e cultivar uma mentalidade forte e resiliente. Nele, você aprenderá:</p>
+          <ul>
+            <li>Como superar adversidades com confiança.</li>
+            <li>Estratégias para manter o foco e a motivação.</li>
+            <li>Como construir uma mentalidade positiva em tempos de dificuldades.</li>
+            <li>Práticas diárias para fortalecer sua mente.</li>
+          </ul>
+          <p>Com este conteúdo, você estará mais preparado para enfrentar qualquer obstáculo e alcançar seus objetivos, independentemente das dificuldades.</p>
+          <a href="#comprar" class="button">VALOR:&nbsp;&nbsp;R$ 29,90</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="comprar" class="purchase">
+    <div class="container">
+      <h2>Compre o E-book "Forja"</h2>
+      <p>Garanta o seu exemplar agora e comece a transformar a sua vida com uma mentalidade inabalável!</p>
+      <a href="javascript:void(0);" class="button" id="comprarAgora">Comprar Agora</a>
+    </div>
+  </section>
+
+  <!-- Seção que exibe o QR Code, inicialmente oculta -->
+  <section id="qr-code" class="qr-code-section" style="display: none;">
+    <div class="container">
+      <h2>Pagamento de R$ 29,90</h2>
+      <p>Para concluir a sua compra, use o QR Code abaixo para efetuar o pagamento.</p>
+      <!-- A imagem do QR Code fornecido -->
+      <img id="qrCodeImg" src="" alt="QR Code para pagamento" />
+      <p>Escaneie o QR Code para concluir a compra.</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/nlh_empreendimentos?igsh=MW44ZHoxcjAzeG82eg%3D%3D&utm_source=qr" class="instagram"><i class="fab fa-instagram"></i></a>
+      <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+      <a href="https://chat.whatsapp.com/Clp9rKA4g0eFFVgjMJmQnf" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+    </div>
+    <p>&copy; 2025 NLH Empreendimentos. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.querySelector('.mobile-menu');
+      menu.classList.toggle('active');
+    }
+
+    // Exibe o QR Code quando clicar no botão "Comprar Agora"
+    document.getElementById('comprarAgora').addEventListener('click', function (event) {
+      event.preventDefault(); // Impede o link de redirecionar
+      document.querySelector('#qr-code').style.display = 'block'; // Exibe a seção com o QR Code
+      window.scrollTo(0, document.querySelector('#qr-code').offsetTop); // Rolagem suave até o QR Code
+    });
+  </script>
+
+</body>
+
+</html>
