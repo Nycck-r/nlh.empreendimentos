@@ -6,13 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>NLH Empreendimentos | E-book Forja</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans:wght@300;400;600&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="forja.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
   <link rel="icon" href="./img/logo.webp" type="image/x-icon">
+  <script src="https://sdk.mercadopago.com/js/v2"></script>
 
-
+  
 </head>
 
 <body>
@@ -40,15 +43,15 @@
     </nav>
     <i class="bi bi-basket3 mobile-basket-icon"></i> <!-- Ícone de cesta -->
 
-    
+
     <nav class="desktop-menu">
       <ul>
-          <li><a href="index.html">HOME</a></li>
-          <li><a href="sobre.html">SOBRE NÓS</a></li>
-          <li><a href="sobre.html#servicos">SERVIÇOS</a></li>
-          <li><a href="sobre.html#contato">CONTATO</a></li>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="sobre.html">SOBRE NÓS</a></li>
+        <li><a href="sobre.html#servicos">SERVIÇOS</a></li>
+        <li><a href="sobre.html#contato">CONTATO</a></li>
       </ul>
-  </nav>
+    </nav>
 
 
 
@@ -56,8 +59,8 @@
       <ul>
         <li><a href="index.html">HOME</a></li>
         <li><a href="sobre.html">SOBRE NÓS</a></li>
-        <li><a href="#servicos">SERVIÇOS</a></li>
-        <li><a href="#contato">CONTATO</a></li>
+        <li><a href="sobre.html#servicos">SERVIÇOS</a></li>
+        <li><a href="sobre.html#contato">CONTATO</a></li>
       </ul>
     </nav>
   </header>
@@ -71,14 +74,16 @@
         </div>
         <div class="ebook-description">
           <h2>Forja: Como Construir uma Mentalidade Inabalável</h2>
-          <p>O eBook "Forja" é um guia completo para ajudar você a enfrentar os maiores desafios da vida e cultivar uma mentalidade forte e resiliente. Nele, você aprenderá:</p>
+          <p>O eBook "Forja" é um guia completo para ajudar você a enfrentar os maiores desafios da vida e cultivar uma
+            mentalidade forte e resiliente. Nele, você aprenderá:</p>
           <ul>
             <li>Como superar adversidades com confiança.</li>
             <li>Estratégias para manter o foco e a motivação.</li>
             <li>Como construir uma mentalidade positiva em tempos de dificuldades.</li>
             <li>Práticas diárias para fortalecer sua mente.</li>
           </ul>
-          <p>Com este conteúdo, você estará mais preparado para enfrentar qualquer obstáculo e alcançar seus objetivos, independentemente das dificuldades.</p>
+          <p>Com este conteúdo, você estará mais preparado para enfrentar qualquer obstáculo e alcançar seus objetivos,
+            independentemente das dificuldades.</p>
           <a href="#comprar" class="button">VALOR:&nbsp;&nbsp;R$ 29,90</a>
         </div>
       </div>
@@ -88,31 +93,62 @@
   <section id="comprar" class="purchase">
     <div class="container">
       <h2>Compre o E-book "Forja"</h2>
-      <p>Garanta o seu exemplar agora e comece a transformar a sua vida com uma mentalidade inabalável!</p>
+      <p class="des"> <b>Após o pagamento, nós da NLH empreendimentos, pedimos a vocês nossos queridos clientes para que mandem o comprovante para os nossos meios de contato, disponiveis na seção de contato!</b>  </p>
       <a href="javascript:void(0);" class="button" id="comprarAgora">Comprar Agora</a>
     </div>
   </section>
 
-  <!-- Seção que exibe o QR Code, inicialmente oculta -->
-  <section id="qr-code" class="qr-code-section" style="display: none;">
+  <!-- Modal do QR Code -->
+  <div id="modalQrCode" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeQrCode">&times;</span>
+      <h2 class="pay">Pagamento de R$ 29,90</h2>
+      <p class="p">O pagamento é realizado via mercado pago, sendo redirecionado para a pagina de pagamento mercado pago... 100% seguro</p>
+      <i class="bi bi-currency-dollar"></i>
+      <a href="https://mpago.la/188cthN" class="paga" target="_blank">Pagar com Pix</a>
+
+    </div>
+  </div>
+
+  <!-- Modal do envio de comprovante -->
+  <div id="modalComprovante" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeComprovante">&times;</span>
+      <h2>Envie seu Comprovante</h2>
+      <p>Envie o comprovante para o nosso número no WhatsApp:</p>
+      <a href="https://wa.me/SEU_NUMERO_AQUI" target="_blank" class="button">Enviar pelo WhatsApp</a>
+    </div>
+  </div>
+
+  
+
+
+
+
+
+  <section id="pague-kiwify" class="kiwify-payment">
     <div class="container">
-      <h2>Pagamento de R$ 29,90</h2>
-      <p>Para concluir a sua compra, use o QR Code abaixo para efetuar o pagamento.</p>
-      <!-- A imagem do QR Code fornecido -->
-      <img id="qrCodeImg" src="" alt="QR Code para pagamento" />
-      <p>Escaneie o QR Code para concluir a compra.</p>
+      <h2>Pague pela Kiwify</h2>
+      <p>Efetue seu pagamento de forma rápida e segura pela plataforma Kiwify.</p>
+      <a href="https://pay.kiwify.com.br/7ZOKI1o" target="_blank">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYwAAAB/CAMAAADLlgV7AAAAkFBMVEX///8BsWkArmEAr2QArV8AqlnI6dd30Kii2btyzaIAsmn8//4Asmrz/PkAtXAAqljx+/fZ8ufq+PLM7d7k9++a2rva8+gatHCq4MZkyZnS7uG45dCU2LfA6NVbxpQuuXo8voOw4cmD061RxI9GwIiM1bIWuXhszJ9jx5ZZwo2H0Kp9zKJMwIkvvYCM2rq86dWO3XpiAAAOqklEQVR4nO1da2PiqhZtgGhFja/4rBp1rHbm1Nv//+9unrA3ARsb0szpYX2bSYLAgv2GPj05ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4OLSO+duw7S445Fj55Nx2HxwybBj3yK+2e+GQYBx4Mci67X44xDhQL2Xj2m43hqv1+37VjO6azvfv++dxI21bxYl4Gci632I3ZhGjlLJo00Dbx4AkbS9nDbRtFZ2Ci5iNXzbZGIfTYYxxGFZ5e8az/UnpxGIfMhzzIVLPwHR/0Zl3r/t9d96p1Nmm0F96EuTdHhubZbCMYiyDQa9CN3JZGc/YwVoXckwDT7StG1/4Gg1YsnUoJWRwXk1td6AyrgSQ4fkv1ho+yYbp52/vmHib2RYm87tt90+ceByuyGW3JadrhrjwAnurolssdY9XIONK5WRsrfUhw9u9tscHwj0Fo53lHlTEgYJOcGJxUQIy+Odv/5L9oP/Y60SK36DtP8qzaQAnIEfUjtm1QhuDrSw2/RgZ+zsTVhdgZ9ATftTXcWF1GqoDaW+PVFC01SHJ8Aafvw00DLE9F6BtdZ7XWEpnhGm1fPOYo75crHbiMTI2QnJzZtua2QgFzilue+aXufCIPSPmEeCNYdmKeYwMadWxV6vdSCDWvz/HD85IY8ambbIxbu1sDKQxSNdu44CMoMLrw326fqnfQFBmeMjbVuTwFG4Mwq9/1hdG2dF+B6ogQqLS8oJ4kIx4aVx83z80MhX9eTBi/k2VP0ewGMkpHf9sbTUKUR0dtDGeLbf+MBnxCg6bmwhd2z3ggJw033wn1lBiXmy3/gUyvhsHOfyo5a4MA8CFfUn5oAJvAxe5MdpxLSReoJSCflnfigP6LyBjIBVmE4H7RwCcXo9Im69/8P3gWt/W/heQwfnfQgZyMny5GbaJGUgZnd/5tgrMZAyf/zxLZBHS/qpXIIvlTa/b9PGf3p/yRPXn4u3nsl6enYqHp3RY/WPxWz0sjOXOICA0+HwuPv+jTa3sTqLv1pIfGyqjlTCH8E8+iexWzxM2kjHhjJICLJ+FzYgWGKXO54efvUApYQu17VdfvO2X3KNwRIqHJJ3N3aj4NTqC0zcEouEchuG0308SYV0mPvc1bCxGovcja5rmGRrZoNVd4QnRoBbxJjJQ0J5+5P/bATmHVET2ZWSbqn5gH8aaB+rW2IofyNfYC2i72AGL3uHCQOyc+ozFbg7zL+MJSMRoPNBX8ZgPrO0MELT2fNjqSfS9VnbDQAbIInmcCLEBycgIAhmOQJnvBbTJmZp8uImn+RrrlMnoU6IJ16bfbODM8LItA7T+W43pwYDuN45xCzZonVoqQAZo/ujL5cjBhixP2Ez+D1WiZii+qUbFQYwjX7mdcqZvQksZpbxPdIJ2UkkQgW6RTo3pwX0G+psqJVMrno+2jqAC+Qy5M+YjMG7o9GsmDKhXZb5/oVWtuKsy4FasJU1Kd2PYFx7nk6ehXKf0XR3WSX5pz1HcSLuuHAoZdwextvNYnfoEXXLpFUTmOIH2GiQjt56k7FeGHUJvNZaxWL9Li72Ihb88SAb8ZaYuRzBrde1NMHqw1VnZqxjutr/OXTs6Q5BxRVygdLSGjFC8zbEbACY3nRTUUF+q5eW49H5BxsJIRlIpNAWbUgnoSynFPXtVPdD/Zk24PGUy9nASFdGjIQNqYrQIr3gmcW3Ph2iIFgFzDRmxScex1ij+RTb4F5SMmxwV3duYpQwwl+E3kYBXyRgeUJBYUQOQjMK4X6k2aoYxivwnH8ANLCOxQu1ryBgvOR9gTpcZoqSxjeyqj401qfjtqW9skfhN1AkpZEwjOPZSuh2SUeiAvl4kbLCUUqJ8cr0LRaMh42m8WCygcFhuhuMU2UZ4l5QiVwPYAjbD3K+gJyOL7QpgMhaoDKNc8a4jA8T4CYhjnNQiAigwZFZbqhIdGSmkIUAVP16mnThyNXoGyVkTcEg+fjQMP1ar1aZmogeRMaOIi7K41Ykp8J/A40Hud9Y+kTtbrDHOBadGMoBSUvT0WEbXkashpBTnNotytyYypq8XxgghflQvcgucPvqBFjPZl3nWkgFcjaVYn9IQEhIJWINiEqk8imUkA+Qz1EQfEBzA1ZBSyqb6xqEpqDNWg+IBZbVUFCDDQ/4u1WWZ9WTIKZFhVanshNsq7KanhZRSUrB9fIGMEFAt/RggN61WgMJkPPBsTsAVYLXEYtdkygc6c0FPhpxbqUeLYk3uzQQbwsWXTIG4GiQDrS9JhhpTQfMunoHgpd0sNQzYyfUSgnCF55VC14/ASMZS97aeDFAKvMy3U1j4B/S3tHn8YgBCC8AIz+4rZIDgsohTygVsVX3HPwbmSibAxyAMxuulxY1kqGG/FDqn7wm5GvlXq+LFeD7EPij0rwwSQjECyUDS5R4ZfVngxoo4v4iJcWr3TM1ioI1NrWiamSFs2a35e0YyvIPmbQMZQ/HfhbAoxEcyHwsh2HOpIblbAr1UhYxyBR9YB3mofCyklF31HQ/TELUNt7/P72+nTu2CVzMZuj1uIAOI7syHG4tuJ0FMIcXyYKFYzUghf40M+UucZJOx0pgTlgCDCriwyU4lmZkMTxNiM5EhJjIPFu6AlAL6OuN36OOX1TYeIgN4YvnqOYvXtWqvDmBxiDE4ZSWEXoImaWUiQ7oamUctXGCSELoQ2vyQPDyKrNgNNvFFMhYylJjuyrAp9f2EI4Wl1GWG2frw+8sW1b2dQUq2gZEMkcxJ51vkfeg5XSdSTiXLSawvnKAxkgGSSLqqb7lcU3NTbEP1YIEFQHOK6o7JTHuJJj98NYh4jwzgUOcwkjERciqxtEWQMI88STm1AoFFJdVgJON2nwyZ8kkfS7PZsvp+whpcdwRyckmMh6/HYBQyOEHZjHtRW5xdEcs3mW/hkpNsx04KeyqZIOHcKWLQTIaMzerIkFEwzodPi+bU9xPUR7qDMkWYdalsydX5Wk1yKWSQ+URGmmL2lVCLmQyx+Om7NP7FUa9ivjjpy5SQIgWNTt8nZICQEVtB577S+B8DzGiU5NT0kl8okvdykbvFExI7IpW8QUxGsppgulQ9H2TwwJOegMqhsAhyiSirGES85kUEbIBFq/GM+WdkSOuWRmCH2j4anQCWqyQLC6E4eZVXu/R43t00IVOpZB2RkYkHUIKvBq3NZEi/l7wIo4MU70g51RP6RC0901SeZPiMDGjd/k/2vJEbFGDuTamJL/LueTA/uWMg86tSMrg6XzpAMnIfbAOPbXHUxh0ypMG676lSClpE0uNTZPrXyZhI61bWN9pX3wlgsk/xY7JR8/ywY1pjlRnXu/QbWqFkCBaxFUfUYCkB1rLaTF+GoRQ/y0JKSQdbDkK0rcr0r5OhVGhlTTRzfQIsfcblOrkdURw8TQecbf5ctlW4YwQml4qhTuHVEEjN3tkZINdZfA10/KZUG1jKTdQgY1c+J97U+QaUwIQR+tRqITyf8czTykVDrtM+v9IQkCGJ3qLNCJyNe2R0Sqe1I6Ch1VqRrNgG4ssKPJ6ISN0ajajvBDDBhDXqC/e912Ku8t2Q2T/5dPqfBkoAGbLmrw+LAaGzYTZtlY9KU6fWJ5RFaA0yUEI0G0tTFyANgeUfG1TQveuDw6HZYPIAxJBrRqUDJEMu5A9YVAgyG/fIwMpNfWOmrN3ysV0zGZJB000dU2Uh1KoFvw80SuOtW5lBWfQ3M24+P5EIyQDbCKpEYBQZ5XqChSKnIuRHoGseRLwbwEgGCBQar03p4oXQkPpOMMRrynBRRD79Raiyy+qQEaKoiAh/3iUDKzdVQ2Pvkpa1WRUyjPcyKIcHKlwQ9GUghcoNV5hk3pQsouz6Hh996mnoxZSyG8XZH82BFgB84YyioTv4YXkMxlIdcO7FfEnGO+S6MfWdQNGN+ssa04oueEzneKkQ0YdkQMmBflLkGMsnlyCmcDuV7uaCcoprbt2AZKDYlFz0d8hA1m1j6lvtaDoWbRDwSmL/79HEBiQDzd4Luj4l3walM30YMBOmHu2Bt05oZ1V3pi8FM7cJAGznBtV3ijM2RrRsTAfs8YOdUvNRhp8gHZ4r45iMfJlyX2OodWQJEffVyFiH8exjDop2AF5E256PJNwoc9vp/SuFoMNU3rRWETLswWoLacLneyc4XoKDJm27G/kZRoGy1Be0eJQ8zbTxdDCiQYyBz7T+5Dwo3mfdkiDqMZ8nH3N/pJvU8c0n6WM2wsWM3eByOMe4Bbc7WRv94cRmsMKC6vEb+q6+R3XnYtNbL4b/giuv76MPikCbVN8Z9oqgYg/dAjaN0sBVKY/6YwAMzmbVd4rSDZbkVl1Z7/Jafxr90L+GsgAm13f8VYtp6fQJO1Ws0bmKY9309pPYOBa55TD4PvWdYeaXwtCDKppjFcDMbUtX8zaBcUDYOrZkplt4yOebLgdSlXiyDKLPcqvHJf6KRu3d6G4ZiZ6gjHEf5V+aV98Z5mU2PHaZmw2+4TwofdLW7bzWUZwDx1Ep8m1yeMtUSZWsBf+21QVIxqs9012VfPkhgmqtZpTSyfjGKyV1eyOeX8Iu1+1xM+znmBy364tPdPeg0MFf/4dbquFFOxXq1T6NYme69CcmhPmDS3SLLgHxmfG1qNZBp78H46VmdNz/3ovzJkuN6IGzfe8hJ+cfIqN01kwTt5t+guFb+e96VASlVT2Tvx+78m31tI2rVuf07vI3gZNLS3+LpREcL4ooJpdWLvdcnO+LKsO+6P0k7zv5i4FRcm0e50lonpLLvK3hzQeP0kFuP8SKAuhvTuflgFPKo/WuxZU2PT1EB1lqbpb9EZguJpvNpO3Bhd2gIh2ULF9/ihH11yJ8XWr9OoUKFj3/mHDU34zx8Zdncu+89E/ikOi6a3sP/3cw2f4OEn+7tEMoZfzcnTn59L2Ydk77yGNEXC5OCaPL9+6x1T9H+x/GMNwcX3vX9dvb2/rafZ4tnJpwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcGgX/wcP88AT53AU6gAAAABJRU5ErkJggg==" alt="Pague pela Kiwify" class="kiwify-logo">
+      </a>
     </div>
   </section>
+  
 
   <footer>
     <div class="social-icons">
-      <a href="https://www.instagram.com/nlh_empreendimentos?igsh=MW44ZHoxcjAzeG82eg%3D%3D&utm_source=qr" class="instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.instagram.com/nlh_empreendimentos?igsh=MW44ZHoxcjAzeG82eg%3D%3D&utm_source=qr"
+        class="instagram"><i class="fab fa-instagram"></i></a>
       <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
       <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
       <a href="https://chat.whatsapp.com/Clp9rKA4g0eFFVgjMJmQnf" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
     </div>
     <p>&copy; 2025 NLH Empreendimentos. Todos os direitos reservados.</p>
   </footer>
+
+  
 
   <script>
     function toggleMenu() {
@@ -126,6 +162,48 @@
       document.querySelector('#qr-code').style.display = 'block'; // Exibe a seção com o QR Code
       window.scrollTo(0, document.querySelector('#qr-code').offsetTop); // Rolagem suave até o QR Code
     });
+
+    // Elementos do modal
+    const modalQrCode = document.getElementById("modalQrCode");
+    const modalComprovante = document.getElementById("modalComprovante");
+    const btnComprar = document.getElementById("comprarAgora");
+    const btnJaPaguei = document.getElementById("btnJaPaguei");
+    const closeQrCode = document.getElementById("closeQrCode");
+    const closeComprovante = document.getElementById("closeComprovante");
+
+    // Abrir o modal de QR Code
+    btnComprar.addEventListener("click", () => {
+      modalQrCode.style.display = "flex";
+    });
+
+    // Fechar o modal de QR Code
+    closeQrCode.addEventListener("click", () => {
+      modalQrCode.style.display = "none";
+    });
+
+    // Abrir o modal de envio de comprovante
+    btnJaPaguei.addEventListener("click", () => {
+      modalQrCode.style.display = "none";
+      modalComprovante.style.display = "flex";
+    });
+
+    // Fechar o modal de envio de comprovante
+    closeComprovante.addEventListener("click", () => {
+      modalComprovante.style.display = "none";
+    });
+
+    // Fechar o modal ao clicar fora dele
+    window.addEventListener("click", (event) => {
+      if (event.target === modalQrCode) {
+        modalQrCode.style.display = "none";
+      }
+      if (event.target === modalComprovante) {
+        modalComprovante.style.display = "none";
+      }
+    });
+
+
+
   </script>
 
 </body>
