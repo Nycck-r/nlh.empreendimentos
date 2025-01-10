@@ -368,10 +368,133 @@
         
       }
 
-
-
       .desktop-menu {
         display: none;
       }
   }
+  
+
+
+  /* Estilos básicos para os modais */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+  }
+  
+  .modal-content img {
+    max-width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+  }
+  
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #5ae66d;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .button:hover {
+    background-color: #5ae66d;
+  }
+
+
+  
+.paga {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #c3aa5b;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 20px;
+}
+
+.paga:hover {
+  background-color: #b1924e;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.paga:active {
+  background-color: #9f7f44;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Estilizando todos os ícones com a classe "bi" */
+.bi {
+  font-size: 24px; /* Tamanho do ícone */
+  color: #c3aa5b;  /* Cor */
+  
+}
+
+/* Estilizando apenas o ícone "bi-currency-dollar" */
+.bi-currency-dollar {
+  font-size: 30px; /* Tamanho maior específico */
+  color: #c3aa5b;  /* Cor */
+  margin-bottom: 50px;
+  display: flex;
+  margin-top: 50px;
+  align-items: center;
+  justify-content: center;
+}
+
+.pay {
+  color: #9f7f44;
+  font-size: 20px;
+}
+
+.p {
+  color: #25D366;
+  margin-top: 20px;
+}
+
+.des {
+  color:#9f7f44;
+  margin-top: 10px;
+  
+
+}
+
+  
   
